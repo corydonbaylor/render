@@ -1,4 +1,4 @@
-from flask import Flask, send_from_directory
+from flask import Flask, send_from_directory, jsonify
 
 app = Flask(__name__, static_folder='../frontend/public')
 
@@ -6,12 +6,16 @@ app = Flask(__name__, static_folder='../frontend/public')
 def hello():
     return "Hello from Flask!"
 
-@app.route('/')
-def serve_frontend():
-    return send_from_directory(app.static_folder, 'index.html')
+@app.route('/api/about')
+def about():
+    return jsonify({
+        "frontend": "Svelte",
+        "backend": "Flask"
+    })
 
+@app.route('/')
 @app.route('/<path:path>')
-def serve_static(path):
+def serve(path='index.html'):
     return send_from_directory(app.static_folder, path)
 
 if __name__ == '__main__':

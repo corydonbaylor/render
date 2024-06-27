@@ -1,16 +1,22 @@
 <script>
-  let message = '';
+  import { Router, Link, Route } from "svelte-routing";
+  import Nav from "./Nav.svelte";
+  import Home from "./Home.svelte";
+  import About from "./About.svelte";
 
-  async function fetchMessage() {
-    const response = await fetch('/api/hello');
-    message = await response.text();
-  }
+  export let url = "";
 </script>
 
-<main>
-  <h1>Svelte + Flask App</h1>
-  <button on:click={fetchMessage}>Get Message</button>
-  {#if message}
-    <p>{message}</p>
-  {/if}
-</main>
+<Router {url}>
+  <Nav />
+  <main>
+    <Route path="/" component={Home} />
+    <Route path="/about" component={About} />
+  </main>
+</Router>
+
+<style>
+  main {
+    padding: 20px;
+  }
+</style>
