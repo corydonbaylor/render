@@ -3,6 +3,7 @@
   import Nav from "./Nav.svelte";
   import Home from "./Home.svelte";
   import About from "./About.svelte";
+  import Tutorials from "./routes/Tutorials.svelte";
 
   export let url = "";
 </script>
@@ -12,6 +13,7 @@
   <main>
     <Route path="/" component={Home} />
     <Route path="/about" component={About} />
+    <Route path="/Tutorials" component={Tutorials} />
   </main>
 </Router>
 
