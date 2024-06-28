@@ -12,4 +12,4 @@
 {#if message}
   <p>{message}</p>
 {/if}
-<img src="https://corydon1.gitlab.io/cdn/hotel.jpeg"></img>
+<img src="https://corydon1.gitlab.io/cdn/hotel.jpeg" />
