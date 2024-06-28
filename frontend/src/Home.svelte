@@ -7,7 +7,7 @@
   }
 </script>
 
-<h1>Welcome to the Home Page</h1>
+<h1>Welcome to the Dumb Page</h1>
 <button on:click={fetchMessage}>Get Message</button>
 {#if message}
   <p>{message}</p>
