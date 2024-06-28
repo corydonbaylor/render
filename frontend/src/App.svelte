@@ -16,7 +16,15 @@
 </Router>
 
 <style>
+  :global(body) {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+
   main {
-    padding: 20px;
+    padding: 80px 20px 20px; /* Increased top padding to account for fixed navbar */
+    max-width: 1200px;
+    margin: 0 auto;
   }
 </style>
