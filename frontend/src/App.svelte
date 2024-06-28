@@ -3,7 +3,8 @@
   import Nav from "./Nav.svelte";
   import Home from "./Home.svelte";
   import About from "./About.svelte";
-  import Tutorials from "./routes/Tutorials.svelte";
+  import Tutorials from "./routes/tutorials/python_for_data/Tutorials.svelte";
+  import Reticulate from "./routes/tutorials/python_for_data/reticulate.svelte";
 
   export let url = "";
 </script>
@@ -14,6 +15,10 @@
     <Route path="/" component={Home} />
     <Route path="/about" component={About} />
     <Route path="/Tutorials" component={Tutorials} />
+    <Route
+      path="/tutorials/python_for_data/reticulate"
+      component={Reticulate}
+    />
   </main>
 </Router>
 
