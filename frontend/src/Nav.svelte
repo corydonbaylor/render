@@ -20,6 +20,8 @@
     <ul class:active={isMenuOpen}>
       <li><Link to="/" on:click={toggleMenu}>Home</Link></li>
       <li><Link to="/about" on:click={toggleMenu}>About</Link></li>
+      <li><Link to="/Tutorials" on:click={toggleMenu}>Tutorials</Link></li>
+
       <!-- Add more navigation items here -->
     </ul>
   </div>
